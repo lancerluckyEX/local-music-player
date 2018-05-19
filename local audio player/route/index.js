@@ -4,7 +4,6 @@ const sendHtml = (path, response) => {
         encoding: 'utf-8'
     }
     fs.readFile(path, options, (error, data) => {
-        // console.log(`读取的html文件 ${path} 内容是`, data)
         response.send(data)
     })
 }
@@ -50,5 +49,4 @@ var routes = [
     PlayList,
 ]
 
-// exports.routes = routes
 module.exports.routes = routes
